@@ -233,9 +233,9 @@ Bar chart:
 
 If you have any questions about this analysis, would like to collaborate on a project, or are interested in my professional profile, please don't hesitate to contact me!
 
-*   **Name:** [Your Full Name]
-*   **Role:** Junior Data Analyst
-*   **LinkedIn:** [@your_linkedin_username](LINK_TO_YOUR_LINKEDIN)
+*   **Name:** Rolando Delgado
+*   **Role:** Student
+*   **LinkedIn:** [Rolando Delgado](https://www.linkedin.com/in/rolandodelgadom/)
 *   **Location:** Dominican Republic 🇩🇴
 
 

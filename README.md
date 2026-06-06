@@ -195,7 +195,7 @@ Pie chart dataviz for churn rate in Germany:
 
 <img width="1324" height="1044" alt="Churn Rate Germany" src="https://github.com/user-attachments/assets/a760e2cc-babc-428c-b69c-1d0489d41afc" />
 
-Conclusion and Recommendations:
+### Conclusion and Recommendations:
 
 [View Slides on Google Slides](https://docs.google.com/presentation/d/1gHJJoXzQcnGA6lSJ2ZT55DrdkxJNKU5GC0jzeFxP7M0/edit?usp=sharing)
 

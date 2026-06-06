@@ -2,15 +2,24 @@
 Data analysis project to identify VIP customer churn and the capital impact on the banking portfolio.
 
 **Project Quick Links:**
-**Interactive Dashboard:** [View on Tableau Public] (https://public.tableau.com/shared/ZMBQK4GKP?:display_count=n&:origin=viz_share_link)
-**Validation Code:** [Open in Google Colab] (https://colab.research.google.com/drive/1q25pubLK0XNCJLplrq2NI-l0vHk-Bqne#scrollTo=EQgGVZZ-DYv9&uniqifier=5)
-**Executive Presentation:** [View Slides on Google Slides](https://docs.google.com/presentation/d/1JKlhcTYKxoBv5ohJJYY4zZHJxJUR0qZZYgx6UAENo1o/edit?slide=id.g3e9ea28c28f_2_15#slide=id.g3e9ea28c28f_2_15)
+
+**Interactive Dashboard:** 
+[View on Tableau Public] (https://public.tableau.com/shared/ZMBQK4GKP?:display_count=n&:origin=viz_share_link)
+
+**Validation Code:** 
+[Open in Google Colab] (https://colab.research.google.com/drive/1q25pubLK0XNCJLplrq2NI-l0vHk-Bqne#scrollTo=EQgGVZZ-DYv9&uniqifier=5)
+
+**Executive Presentation:** 
+[View Slides on Google Slides](https://docs.google.com/presentation/d/1JKlhcTYKxoBv5ohJJYY4zZHJxJUR0qZZYgx6UAENo1o/edit?slide=id.g3e9ea28c28f_2_15#slide=id.g3e9ea28c28f_2_15)
 
 **Data Source**
 The analysis is based on a public dataset from a financial institution available on Kaggle:
-**Original Dataset:** [Bank Customer Churn Prediction (Kaggle)](https://www.kaggle.com/datasets/gauravtopre/bank-customer-churn-dataset?resource=download)
 
-**Dataset Characteristics:** Contains records of 10,000 customers with demographic variables (age, country, gender) and financial variables (account balances, number of active products, estimated salary, and churn status).
+**Original Dataset:** 
+[Bank Customer Churn Prediction (Kaggle)](https://www.kaggle.com/datasets/gauravtopre/bank-customer-churn-dataset?resource=download)
+
+**Dataset Characteristics:** 
+Contains records of 10,000 customers with demographic variables (age, country, gender) and financial variables (account balances, number of active products, estimated salary, and churn status).
 
 Executive summary:
 The fictional ABC Multinational Bank is facing a harsh situation where a big chunk of their customers is leaving the bank. In order to face the situation, the bank is requesting a data analysis project that will assist in identifying the key factors that the bank can use to predict customer churn by analyzing data from account holders. The analysis found that the biggest chunk of customer churn was represented mainly by a specific population group within the bank: Clients 40 years and older who own more than 4 bank products.

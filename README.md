@@ -7,10 +7,10 @@ Data analysis project to identify VIP customer churn and the capital impact on t
 [View on Tableau Public](https://public.tableau.com/shared/ZMBQK4GKP?:display_count=n&:origin=viz_share_link)
 
 **Validation Code:** 
-[Open in Google Colab](https://colab.research.google.com/drive/1q25pubLK0XNCJLplrq2NI-l0vHk-Bqne#scrollTo=EQgGVZZ-DYv9&uniqifier=5)
+[Open in Google Colab](https://colab.research.google.com/drive/1Z8diuSvzhmpypf6_mOStEH0293l-G-f6?usp=sharing)
 
 **Executive Presentation:** 
-[View Slides on Google Slides](https://docs.google.com/presentation/d/1JKlhcTYKxoBv5ohJJYY4zZHJxJUR0qZZYgx6UAENo1o/edit?slide=id.g3e9ea28c28f_2_15#slide=id.g3e9ea28c28f_2_15)
+[View Slides on Google Slides](https://docs.google.com/presentation/d/1gHJJoXzQcnGA6lSJ2ZT55DrdkxJNKU5GC0jzeFxP7M0/edit?usp=sharing)
 
 **Data Source**
 The analysis is based on a public dataset from a financial institution available on Kaggle:
@@ -28,7 +28,7 @@ Technical Analysis and Methodology:
 The first step was to upload the database to Google Colab and confirm whether the data was ready to be manipulated and analyzed.
 Loading the data:
 
-[Open in Google Colab](https://colab.research.google.com/drive/1q25pubLK0XNCJLplrq2NI-l0vHk-Bqne#scrollTo=EQgGVZZ-DYv9&uniqifier=5)
+[Open in Google Colab](https://colab.research.google.com/drive/1Z8diuSvzhmpypf6_mOStEH0293l-G-f6?usp=sharing)
 
 <details>
 <summary>💻 Haz clic aquí para ver el código completo de validación</summary>
@@ -181,7 +181,7 @@ Pie chart dataviz for churn rate in Germany:
 
 Conclusion and Recommendations:
 
-[View Slides on Google Slides](https://docs.google.com/presentation/d/1JKlhcTYKxoBv5ohJJYY4zZHJxJUR0qZZYgx6UAENo1o/edit?slide=id.g3e9ea28c28f_2_15#slide=id.g3e9ea28c28f_2_15)
+[View Slides on Google Slides](https://docs.google.com/presentation/d/1gHJJoXzQcnGA6lSJ2ZT55DrdkxJNKU5GC0jzeFxP7M0/edit?usp=sharing)
 
 Overall, the data indicates that Germany is the lead country with the highest churn rate of over 32%. Furthermore, regarding different factors and considerations, the research revails that the most critical group to churn are people aged 40 years plus who own 3 or more bank products with a churn rate of higher than 95%. Visualized as follows:
 

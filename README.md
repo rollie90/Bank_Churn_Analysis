@@ -31,7 +31,7 @@ Loading the data:
 [Open in Google Colab](https://colab.research.google.com/drive/1Z8diuSvzhmpypf6_mOStEH0293l-G-f6?usp=sharing)
 
 <details>
-<summary>💻 Haz clic aquí para ver el código completo de validación</summary>
+<summary>💻 Click here to view the complete validation code.</summary>
     
 
     ```python
@@ -52,7 +52,7 @@ Loading the data:
 
 Verifying the data:
 <details>
-<summary>💻 Haz clic aquí para ver el código completo de validación</summary>
+<summary>💻 Click here to view the complete validation code.</summary>
     
     ```python
     cla.info()
@@ -63,7 +63,7 @@ Verifying the data:
 Because the data was clean, with no nulls nor duplicates, I proceeded with the analysis.
 1- The first thing that was noticiable was that the data showed that Germany had largest porcentage of churn compared to Spain and France with a 32% of churn. Here I used SQL to obtain the information and Tableau to visualize it with a heatmap:
 <details>
-<summary>💻 Haz clic aquí para ver el código completo de validación</summary>
+<summary>💻 Click here to view the complete validation code.</summary>
     
     ```sql
     query_kpi = f"""
@@ -86,7 +86,7 @@ Because the data was clean, with no nulls nor duplicates, I proceeded with the a
 
 2- I used the library of matplotlib to create an histogram to verify if there was a specific age group we should focus on in Germany:
 <details>
-<summary>💻 Haz clic aquí para ver el código completo de validación</summary>
+<summary>💻 Click here to view the complete validation code.</summary>
     
     ```python
     import matplotlib.pyplot as plt
@@ -124,7 +124,7 @@ Age 50+:
 Clients who own 4+ bank products have a churn rate of 100%. 
 Code:
 <details>
-<summary>💻 Haz clic aquí para ver el código completo de validación</summary>
+<summary>💻 Click here to view the complete validation code.</summary>
     
     ```sql
     query_kpi = f"""
@@ -162,7 +162,7 @@ To gauge the true urgency of customer attrition, Python and Tableau were used to
 
 Python code:
 <details>
-<summary>💻 Haz clic aquí para ver el código completo de validación</summary>
+<summary>💻 Click here to view the complete validation code.</summary>
     
     ```Python
     bank_germany = active_balance_df[active_balance_df['country']=='Germany']

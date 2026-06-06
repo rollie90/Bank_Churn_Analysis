@@ -32,7 +32,7 @@ Loading the data:
 
 <details>
 <summary>💻 Haz clic aquí para ver el código completo de validación</summary>
-    '''python
+    ```python
 import duckdb
 import numpy as np
 import pandas as pd
@@ -44,23 +44,23 @@ SELECT * FROM read_csv_auto('{path}')
 cla = duckdb.query(query).to_df() #For Churn Level Analysis
 print(f"Dataset sucessfully loaded. Total registers: {len(cla)}")
 print(cla.head())
-'''
+```
 </details>
 
 Verifying the data:
 <details>
 <summary>💻 Haz clic aquí para ver el código completo de validación</summary>
-    '''python
+    ```python
 cla.info()
 cla.describe(include='all')
-'''
+```
 </details>
 
 Because the data was clean, with no nulls nor duplicates, I proceeded with the analysis.
 1- The first thing that was noticiable was that the data showed that Germany had largest porcentage of churn compared to Spain and France with a 32% of churn. Here I used SQL to obtain the information and Tableau to visualize it with a heatmap:
 <details>
 <summary>💻 Haz clic aquí para ver el código completo de validación</summary>
-    '''SQL
+    ```SQL
 query_kpi = f"""
 SELECT
     country,
@@ -74,7 +74,7 @@ ORDER BY churn_percentage DESC
 
 kpi_country = duckdb.query(query_kpi).to_df()  #Churn Percetage by country
 print(kpi_country)
-'''
+```
 </details>
 
 <img width="510" height="567" alt="Country Heat map" src="https://github.com/user-attachments/assets/829783ba-55f3-4875-9b8a-ce573fd924a3" />
@@ -82,7 +82,7 @@ print(kpi_country)
 2- I used the library of matplotlib to create an histogram to verify if there was a specific age group we should focus on in Germany:
 <details>
 <summary>💻 Haz clic aquí para ver el código completo de validación</summary>
-    '''python
+    ```python
 import matplotlib.pyplot as plt
 import seaborn as sns
 import numpy as np
@@ -98,7 +98,7 @@ plt.title('Churn Age Distribution in Germany')
 plt.xlabel('Age')
 plt.ylabel('Client Number')
 plt.show()
-'''
+```
 </details>
 
 <img width="1067" height="690" alt="Histogram Age Group Ger" src="https://github.com/user-attachments/assets/9a126d00-2761-4400-8d59-a10ad15ade7b" />
@@ -119,7 +119,7 @@ Clients who own 4+ bank products have a churn rate of 100%.
 Code:
 <details>
 <summary>💻 Haz clic aquí para ver el código completo de validación</summary>
-    '''SQL
+    ```python
 query_kpi = f"""
 SELECT
     country,
@@ -133,7 +133,7 @@ ORDER BY churn_percentage_germany DESC
 
 kpi_germany_products = duckdb.query(query_kpi).to_df()  #Churn Percentage in Germany
 print(kpi_germany_products)
-'''
+```
 </details>
 
 Visual:
@@ -148,7 +148,7 @@ Furthermore, if considering the age groups 40+ from the previous assesment the c
 Python code:
 <details>
 <summary>💻 Haz clic aquí para ver el código completo de validación</summary>
-    '''Python
+    ```Python
 bank_germany = active_balance_df[active_balance_df['country']=='Germany']
 churned_germany = churned_customers[churned_customers['country']=='Germany']
 retained_germany = retained_customers[retained_customers['country']=='Germany']
@@ -168,7 +168,7 @@ print(f"Total Bank Capital Drain Percentage in Germany: {drain_percentage_german
 print(f"Average Balance of Exited Customers in Germany: ${avg_churn_germany:,.2f}")
 print(f"Average Balance of Retained Customers in Germany: ${avg_retained_germany:,.2f}")
 print(f"Value Differential (Churn vs. Retained) in Germany: {relative_change_germany:,.2f}%")
-'''
+```
 </details>
 
 Heatmap dataviz for balance drain in Germany:

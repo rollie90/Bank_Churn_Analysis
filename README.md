@@ -236,6 +236,7 @@ If you have any questions about this analysis, would like to collaborate on a pr
 *   **Name:** Rolando Delgado
 *   **Role:** Student
 *   **LinkedIn:** [Rolando Delgado](https://www.linkedin.com/in/rolandodelgadom/)
+*   **Kaggle:** [Rolando Delgado](https://www.kaggle.com/rolandodelgadom)
 *   **Location:** Dominican Republic 🇩🇴
 
 

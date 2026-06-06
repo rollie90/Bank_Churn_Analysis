@@ -4,10 +4,10 @@ Data analysis project to identify VIP customer churn and the capital impact on t
 **Project Quick Links:**
 
 **Interactive Dashboard:** 
-[View on Tableau Public] (https://public.tableau.com/shared/ZMBQK4GKP?:display_count=n&:origin=viz_share_link)
+[View on Tableau Public](https://public.tableau.com/shared/ZMBQK4GKP?:display_count=n&:origin=viz_share_link)
 
 **Validation Code:** 
-[Open in Google Colab] (https://colab.research.google.com/drive/1q25pubLK0XNCJLplrq2NI-l0vHk-Bqne#scrollTo=EQgGVZZ-DYv9&uniqifier=5)
+[Open in Google Colab](https://colab.research.google.com/drive/1q25pubLK0XNCJLplrq2NI-l0vHk-Bqne#scrollTo=EQgGVZZ-DYv9&uniqifier=5)
 
 **Executive Presentation:** 
 [View Slides on Google Slides](https://docs.google.com/presentation/d/1JKlhcTYKxoBv5ohJJYY4zZHJxJUR0qZZYgx6UAENo1o/edit?slide=id.g3e9ea28c28f_2_15#slide=id.g3e9ea28c28f_2_15)

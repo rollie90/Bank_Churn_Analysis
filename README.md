@@ -151,7 +151,15 @@ Furthermore, if considering the age groups 40+ from the previous assesment the c
 
 <img width="374" height="312" alt="Products_Churn rate age 40+" src="https://github.com/user-attachments/assets/1f5ae7d7-890e-49ad-9208-a8fbd2cdc7c9" />
 
-4- Finally, I wanted to calculate the overall impact of the churn for the bank in Germany to measure the real urgency of the matter. I utilized Python to calculate the financial burden of the churn rate for the bank in Germany, which resulted on a 32.61% of capital drain that amounts to $97,973,915.53, and verified my previous findings. I also used Tableau to calculate the churn rate, which turned out to be 32.44%. Finally, I created a dataviz for each.
+4- Financial Impact vs. Customer Volume (Churn Effect in Germany)
+
+To gauge the true urgency of customer attrition, Python and Tableau were used to compare the volume of departing customers against the actual capital draining from the bank:
+
+*   **Impact by Customer Volume:** **32.44%** of the total customer base in Germany has left the institution (814 customers out of a portfolio of 2,509).
+*   **Impact of Capital Outflow:** This departing group accounts for a disproportionate **32.61% of the total capital** held in the country, representing a massive liquidity outflow of **$97,973,915.53 USD**.
+
+**Strategic Analysis:** Although the percentages appear aligned (~32%), an analysis of account balances reveals that the average balance of departing customers ($120,361.08 USD) is higher than that of retained customers ($119,427.11 USD). This confirms that churn in Germany is not merely a retail customer issue, but a **critical drain directly affecting the institution's high-value (VIP) accounts**.
+
 Python code:
 <details>
 <summary>💻 Haz clic aquí para ver el código completo de validación</summary>
@@ -191,7 +199,21 @@ Conclusion and Recommendations:
 
 [View Slides on Google Slides](https://docs.google.com/presentation/d/1gHJJoXzQcnGA6lSJ2ZT55DrdkxJNKU5GC0jzeFxP7M0/edit?usp=sharing)
 
-Overall, the data indicates that Germany is the lead country with the highest churn rate of over 32%. Furthermore, regarding different factors and considerations, the research revails that the most critical group to churn are people aged 40 years plus who own 3 or more bank products with a churn rate of higher than 95%. Visualized as follows:
+The core of the problem at ABC Multinational Bank has been clearly identified: **Customers in Germany, aged 40 or older, who hold 3 or more financial products (where the churn rate exceeds 95%).** Based on this finding, the following immediate actions are proposed:
+
+### 1. Qualitative Friction Audit (Target: 40+ Multi-product Customers)
+*   **Action:** Immediately implement automated digital surveys and focus group interviews targeting only active customers who fit this risk profile.
+*   **Objective:** Determine whether the 100% churn rate among customers with 4 products stems from forced cross-selling (aggressive cross-selling tactics), a poor experience regarding fee consolidation, or deficiencies in premium customer service compared to local competitors in Germany.
+
+### 2. VIP Retention and Loyalty Campaign (Retention Strategy)
+*   **Action:** Design an exclusive loyalty program for the mature multi-product segment (revamping the benefits catalog, waiving maintenance fees for the third active product, and offering preferential interest rate incentives).
+*   **Objective:** Halt the $97.9 million outflow by mitigating dissatisfaction before customers reach the critical age bracket (50–59 years old), where historical churn peaks at 70.04%.
+
+### 3. Early Warning System
+*   **Action:** Configure an operational trigger within the bank’s CRM system. Whenever a customer in Germany over the age of 35 signs up for a third product, their account must be flagged as a "Priority Monitoring Profile" for the Customer Success team. 
+
+
+Visualized as follows:
 
 Pie chart:
 
@@ -201,16 +223,6 @@ Bar chart:
 
 <img width="363" height="323" alt="Bar chart 3 products pls" src="https://github.com/user-attachments/assets/dd89c75e-75a9-4562-946f-aa0e70ac3395" />
 
-Suggestions:
-
-1- Qualitative analysis research on the targeted population with digital surveys and in person client profiling. The objective being to identidy core churn reasons: 
-* Customer service satisfaction level.
-* Score for bank performance and overall products & services vis à vis the competition.
-
-2- Create a marketing loyalty campaign which targets the weak points:
-* Product catalogue renovation.
-* Promotions for the targeted population.
-* Incentive programs.
 
 ## Author and Contact
 

@@ -28,7 +28,7 @@ Technical Analysis and Methodology:
 The first step was to upload the database to Google Colab and confirm whether the data was ready to be manipulated and analyzed.
 Loading the data:
 
-[Open in Google Colab] (https://colab.research.google.com/drive/1q25pubLK0XNCJLplrq2NI-l0vHk-Bqne#scrollTo=EQgGVZZ-DYv9&uniqifier=5)
+[Open in Google Colab](https://colab.research.google.com/drive/1q25pubLK0XNCJLplrq2NI-l0vHk-Bqne#scrollTo=EQgGVZZ-DYv9&uniqifier=5)
 
 <details>
 <summary>💻 Haz clic aquí para ver el código completo de validación</summary>

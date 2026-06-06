@@ -79,7 +79,9 @@ plt.show()
 
 <img width="1067" height="690" alt="Histogram Age Group Ger" src="https://github.com/user-attachments/assets/9a126d00-2761-4400-8d59-a10ad15ade7b" />
 
-I also played around with Tableau using different age groups and found out that when considering the ages 40+ the churn rate increased to over 50% and 50+ to 60% overall in Germany.
+I also played around with Tableau using different age groups and found out that when considering the ages 40+ the churn overall rate increased to 50% plus in Germany.
+
+
 Age 40+:
 
 <img width="521" height="579" alt="Age group 40+" src="https://github.com/user-attachments/assets/04b2a39e-451d-4814-81e5-0379a6fa05b8" />

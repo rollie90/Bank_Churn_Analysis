@@ -60,7 +60,8 @@ Verifying the data:
     ```
 </details>
 
-Because the data was clean, with no nulls nor duplicates, I proceeded with the analysis.
+Because the data was clean, with no nulls nor duplicates, I proceeded with the analysis: 
+
 ### 1- The first thing that was noticiable was that the data showed that Germany had largest porcentage of churn compared to Spain and France with a 32% of churn. Here I used SQL to obtain the information and Tableau to visualize it with a heatmap:
 
 <details>

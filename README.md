@@ -61,7 +61,8 @@ Verifying the data:
 </details>
 
 Because the data was clean, with no nulls nor duplicates, I proceeded with the analysis.
-1- The first thing that was noticiable was that the data showed that Germany had largest porcentage of churn compared to Spain and France with a 32% of churn. Here I used SQL to obtain the information and Tableau to visualize it with a heatmap:
+### 1- The first thing that was noticiable was that the data showed that Germany had largest porcentage of churn compared to Spain and France with a 32% of churn. Here I used SQL to obtain the information and Tableau to visualize it with a heatmap:
+
 <details>
 <summary>💻 Click here to view the complete validation code.</summary>
     
@@ -84,7 +85,8 @@ Because the data was clean, with no nulls nor duplicates, I proceeded with the a
 
 <img width="510" height="567" alt="Country Heat map" src="https://github.com/user-attachments/assets/829783ba-55f3-4875-9b8a-ce573fd924a3" />
 
-2- I used the library of matplotlib to create an histogram to verify if there was a specific age group we should focus on in Germany:
+### 2- I used the library of matplotlib to create an histogram to verify if there was a specific age group we should focus on in Germany:
+
 <details>
 <summary>💻 Click here to view the complete validation code.</summary>
     
@@ -120,9 +122,11 @@ Age 50+:
 
 <img width="516" height="582" alt="Age Group 50+" src="https://github.com/user-attachments/assets/435dce3c-5138-4d02-8462-cc7b562dfd71" />
 
-3- Experimenting with the variables lead me to find a pattern with the quantity of bank products own by clients. The result was impressive:
+### 3- Experimenting with the variables lead me to find a pattern with the quantity of bank products own by clients. The result was impressive:
 Clients who own 4+ bank products have a churn rate of 100%. 
+
 Code:
+
 <details>
 <summary>💻 Click here to view the complete validation code.</summary>
     
@@ -151,7 +155,7 @@ Furthermore, if considering the age groups 40+ from the previous assesment the c
 
 <img width="374" height="312" alt="Products_Churn rate age 40+" src="https://github.com/user-attachments/assets/1f5ae7d7-890e-49ad-9208-a8fbd2cdc7c9" />
 
-4- Financial Impact vs. Customer Volume (Churn Effect in Germany)
+### 4- Financial Impact vs. Customer Volume (Churn Effect in Germany)
 
 To gauge the true urgency of customer attrition, Python and Tableau were used to compare the volume of departing customers against the actual capital draining from the bank:
 
@@ -195,7 +199,7 @@ Pie chart dataviz for churn rate in Germany:
 
 <img width="1324" height="1044" alt="Churn Rate Germany" src="https://github.com/user-attachments/assets/a760e2cc-babc-428c-b69c-1d0489d41afc" />
 
-### Conclusion and Recommendations:
+## Conclusion and Recommendations:
 
 [View Slides on Google Slides](https://docs.google.com/presentation/d/1gHJJoXzQcnGA6lSJ2ZT55DrdkxJNKU5GC0jzeFxP7M0/edit?usp=sharing)
 

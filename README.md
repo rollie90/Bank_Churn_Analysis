@@ -32,49 +32,54 @@ Loading the data:
 
 <details>
 <summary>💻 Haz clic aquí para ver el código completo de validación</summary>
-    ```python
-import duckdb
-import numpy as np
-import pandas as pd
+    
 
-path = '/content/Bank Customer Churn Prediction.csv'
-query = f"""
-SELECT * FROM read_csv_auto('{path}')
-"""
-cla = duckdb.query(query).to_df() #For Churn Level Analysis
-print(f"Dataset sucessfully loaded. Total registers: {len(cla)}")
-print(cla.head())
-```
+    ```python
+    import duckdb
+    import numpy as np
+    import pandas as pd
+    
+    path = '/content/Bank Customer Churn Prediction.csv'
+    query = f"""
+    SELECT * FROM read_csv_auto('{path}')
+    """
+    
+    cla = duckdb.query(query).to_df() #For Churn Level Analysis
+    print(f"Dataset sucessfully loaded. Total registers: {len(cla)}")
+    print(cla.head())
+    ```
 </details>
 
 Verifying the data:
 <details>
 <summary>💻 Haz clic aquí para ver el código completo de validación</summary>
+    
     ```python
-cla.info()
-cla.describe(include='all')
-```
+    cla.info()
+    cla.describe(include='all')
+    ```
 </details>
 
 Because the data was clean, with no nulls nor duplicates, I proceeded with the analysis.
 1- The first thing that was noticiable was that the data showed that Germany had largest porcentage of churn compared to Spain and France with a 32% of churn. Here I used SQL to obtain the information and Tableau to visualize it with a heatmap:
 <details>
 <summary>💻 Haz clic aquí para ver el código completo de validación</summary>
-    ```SQL
-query_kpi = f"""
-SELECT
+    
+    ```sql
+    query_kpi = f"""
+    SELECT
     country,
     COUNT(*) as total_clients,
     SUM(churn) as total_churn,
     ROUND(AVG(churn) * 100, 2) as churn_percentage
-FROM read_csv_auto('{path}')
-GROUP BY country
-ORDER BY churn_percentage DESC
-"""
-
-kpi_country = duckdb.query(query_kpi).to_df()  #Churn Percetage by country
-print(kpi_country)
-```
+    FROM read_csv_auto('{path}')
+    GROUP BY country
+    ORDER BY churn_percentage DESC
+    """
+    
+    kpi_country = duckdb.query(query_kpi).to_df()  #Churn Percetage by country
+    print(kpi_country)
+    ```
 </details>
 
 <img width="510" height="567" alt="Country Heat map" src="https://github.com/user-attachments/assets/829783ba-55f3-4875-9b8a-ce573fd924a3" />
@@ -82,23 +87,24 @@ print(kpi_country)
 2- I used the library of matplotlib to create an histogram to verify if there was a specific age group we should focus on in Germany:
 <details>
 <summary>💻 Haz clic aquí para ver el código completo de validación</summary>
+    
     ```python
-import matplotlib.pyplot as plt
-import seaborn as sns
-import numpy as np
-import pandas as pd
-
-germany = cla[cla['country'] == 'Germany']
-
-plt.figure(figsize=(10, 6))
-
-sns.histplot(data=germany, x='age', hue='churn', bins=20, kde=True, palette='viridis')
-
-plt.title('Churn Age Distribution in Germany')
-plt.xlabel('Age')
-plt.ylabel('Client Number')
-plt.show()
-```
+    import matplotlib.pyplot as plt
+    import seaborn as sns
+    import numpy as np
+    import pandas as pd
+    
+    germany = cla[cla['country'] == 'Germany']
+    
+    plt.figure(figsize=(10, 6))
+    
+    sns.histplot(data=germany, x='age', hue='churn', bins=20, kde=True, palette='viridis')
+    
+    plt.title('Churn Age Distribution in Germany')
+    plt.xlabel('Age')
+    plt.ylabel('Client Number')
+    plt.show()
+    ```
 </details>
 
 <img width="1067" height="690" alt="Histogram Age Group Ger" src="https://github.com/user-attachments/assets/9a126d00-2761-4400-8d59-a10ad15ade7b" />
@@ -119,21 +125,22 @@ Clients who own 4+ bank products have a churn rate of 100%.
 Code:
 <details>
 <summary>💻 Haz clic aquí para ver el código completo de validación</summary>
-    ```python
-query_kpi = f"""
-SELECT
+    
+    ```sql
+    query_kpi = f"""
+    SELECT
     country,
     products_number,
     ROUND(AVG(churn) * 100,2) as churn_percentage_germany by products
-FROM read_csv_auto('{path}')
-WHERE country = 'Germany'
-GROUP BY country, products_number
-ORDER BY churn_percentage_germany DESC
-"""
-
-kpi_germany_products = duckdb.query(query_kpi).to_df()  #Churn Percentage in Germany
-print(kpi_germany_products)
-```
+    FROM read_csv_auto('{path}')
+    WHERE country = 'Germany'
+    GROUP BY country, products_number
+    ORDER BY churn_percentage_germany DESC
+    """
+    
+    kpi_germany_products = duckdb.query(query_kpi).to_df()  #Churn Percentage in Germany
+    print(kpi_germany_products)
+    ```
 </details>
 
 Visual:
@@ -148,27 +155,28 @@ Furthermore, if considering the age groups 40+ from the previous assesment the c
 Python code:
 <details>
 <summary>💻 Haz clic aquí para ver el código completo de validación</summary>
+    
     ```Python
-bank_germany = active_balance_df[active_balance_df['country']=='Germany']
-churned_germany = churned_customers[churned_customers['country']=='Germany']
-retained_germany = retained_customers[retained_customers['country']=='Germany']
-
-total_bank_capital_germany = bank_germany['balance'].sum()
-churn_germany_balance = churned_germany['balance'].sum()
-retained_germany_balance = retained_germany['balance'].sum()
-drain_percentage_germany = (churn_germany_balance/total_bank_capital_germany)*100
-avg_churn_germany = churned_germany['balance'].mean()
-avg_retained_germany = retained_germany['balance'].mean()
-relative_change_germany = ((avg_churn_germany-avg_retained_germany)/avg_retained_germany)*100
-
-print(f"Total Capital in Germany: ${total_bank_capital_germany:,.2f}")
-print(f"Total Balance of Exited Customers in Germany: ${churn_germany_balance:,.2f}")
-print(f"Total Balance of Retained Customers in Germany: ${retained_germany_balance:,.2f}")
-print(f"Total Bank Capital Drain Percentage in Germany: {drain_percentage_germany:,.2f}%")
-print(f"Average Balance of Exited Customers in Germany: ${avg_churn_germany:,.2f}")
-print(f"Average Balance of Retained Customers in Germany: ${avg_retained_germany:,.2f}")
-print(f"Value Differential (Churn vs. Retained) in Germany: {relative_change_germany:,.2f}%")
-```
+    bank_germany = active_balance_df[active_balance_df['country']=='Germany']
+    churned_germany = churned_customers[churned_customers['country']=='Germany']
+    retained_germany = retained_customers[retained_customers['country']=='Germany']
+    
+    total_bank_capital_germany = bank_germany['balance'].sum()
+    churn_germany_balance = churned_germany['balance'].sum()
+    retained_germany_balance = retained_germany['balance'].sum()
+    drain_percentage_germany = (churn_germany_balance/total_bank_capital_germany)*100
+    avg_churn_germany = churned_germany['balance'].mean()
+    avg_retained_germany = retained_germany['balance'].mean()
+    relative_change_germany = ((avg_churn_germany-avg_retained_germany)/avg_retained_germany)*100
+    
+    print(f"Total Capital in Germany: ${total_bank_capital_germany:,.2f}")
+    print(f"Total Balance of Exited Customers in Germany: ${churn_germany_balance:,.2f}")
+    print(f"Total Balance of Retained Customers in Germany: ${retained_germany_balance:,.2f}")
+    print(f"Total Bank Capital Drain Percentage in Germany: {drain_percentage_germany:,.2f}%")
+    print(f"Average Balance of Exited Customers in Germany: ${avg_churn_germany:,.2f}")
+    print(f"Average Balance of Retained Customers in Germany: ${avg_retained_germany:,.2f}")
+    print(f"Value Differential (Churn vs. Retained) in Germany: {relative_change_germany:,.2f}%")
+    ```
 </details>
 
 Heatmap dataviz for balance drain in Germany:
